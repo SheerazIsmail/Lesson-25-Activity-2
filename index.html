@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        
+    </head>
+    <body style=" background-color: aquamarine;">
+        <center>
+            <p style="background-color: aqua;"> Click the button to get a tine-based 
+                greeting:
+            </p>
+            <button style="background-color: aqua;" onclick="buttonfunction()"> Click Me</button>
+            <p id="hour"></p>
+            <p id="greet"></p>
+
+            <script>
+                function buttonfunction() {
+                    var greeting;
+                    var time = new Date().getHours();
+
+                     if ( time < 12) {
+                        greeting = "Good Morning";
+                     }
+                     else if (time == 12) {
+                        greeting = "Good afternoon";
+                     }
+                     else if (time > 12 && time < 20) {
+                        greeting = "Good evening";
+                     }
+                     else {
+                        greeting = "Good night";
+                     }
+
+                     document.getElementById("hour").innerHTML = "Current Hour is: " + time;
+                     document.getElementById("greet").innerHTML = greeting;
+
+                }
+            </script>
+        </center>
+    </body>
+</html>
